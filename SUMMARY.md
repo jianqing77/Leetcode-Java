@@ -1,10 +1,8 @@
 # Table of contents
 
-* [👋 Welcome to Leetcode Note](README.md)
-
 ## 🔻 Overview
 
-* [Data Structure](overview/data-structure/README.md)
+* [Data Structure](README.md)
   * [◽ Array 数组](overview/data-structure/array-shu-zu.md)
   * [▫ String 字符串](overview/data-structure/string-zi-fu-chuan.md)
   * [▫ List 列表](overview/data-structure/list-lie-biao.md)
@@ -20,7 +18,7 @@
 * [▫ Two Pointers 双指针类](types/two-pointers-shuang-zhi-zhen-lei/README.md)
   * [1. >< 相向双指针](types/two-pointers-shuang-zhi-zhen-lei/1.-xiang-xiang-shuang-zhi-zhen/README.md)
     * [Two Sum型](types/two-pointers-shuang-zhi-zhen-lei/1.-xiang-xiang-shuang-zhi-zhen/two-sum-xing/README.md)
-      * [001. Two Sum](types/two-pointers-shuang-zhi-zhen-lei/1.-xiang-xiang-shuang-zhi-zhen/two-sum-xing/001.-two-sum.md)
+      * [🟢 001. Two Sum](types/two-pointers-shuang-zhi-zhen-lei/1.-xiang-xiang-shuang-zhi-zhen/two-sum-xing/001.-two-sum.md)
     * [Partition 型](types/two-pointers-shuang-zhi-zhen-lei/1.-xiang-xiang-shuang-zhi-zhen/partition-xing.md)
     * [Reverse型](types/two-pointers-shuang-zhi-zhen-lei/1.-xiang-xiang-shuang-zhi-zhen/reverse-xing.md)
   * [2. >>同向双指针](types/two-pointers-shuang-zhi-zhen-lei/2.-tong-xiang-shuang-zhi-zhen/README.md)
@@ -28,7 +26,8 @@
     * [Fast and Slow 快慢串口](types/two-pointers-shuang-zhi-zhen-lei/2.-tong-xiang-shuang-zhi-zhen/fast-and-slow-kuai-man-chuan-kou.md)
   * [3. <>背向双指针](types/two-pointers-shuang-zhi-zhen-lei/3.-bei-xiang-shuang-zhi-zhen/README.md)
     * [Palindrome型](types/two-pointers-shuang-zhi-zhen-lei/3.-bei-xiang-shuang-zhi-zhen/palindrome-xing.md)
-* [▫ Recursion 递归类](types/recursion-di-gui-lei.md)
+* [▫ Recursion 递归类](types/recursion-di-gui-lei/README.md)
+  * [Page 1](types/recursion-di-gui-lei/page-1.md)
 * [▫ Binary Tree 二叉树类](types/binary-tree-er-cha-shu-lei.md)
 * [▫ Binary Search Tree 类](types/binary-search-tree-lei.md)
 * [▫ Bit & Math 位运算与数学](types/bit-math-wei-yun-suan-yu-shu-xue.md)
@@ -40,7 +39,7 @@
 * [▫ String字符串类](types/string-zi-fu-chuan-lei.md)
 * [▫ Heap 类](types/heap-lei.md)
 * [▫ Stack类](types/stack-lei/README.md)
-  * [20 - Valid Parentheses](types/stack-lei/20-valid-parentheses.md)
+  * [🟢 20 - Valid Parentheses](types/stack-lei/20-valid-parentheses.md)
 * [▫ Queue类](types/queue-lei.md)
 * [▫ Graph类](types/graph-lei.md)
 * [▫ Linked List类](types/linked-list-lei.md)
@@ -48,8 +47,7 @@
   * [001 - Two Pointers](types/hashmaphashset-lei/001-two-pointers.md)
   * [167 - Two Sum II - Input Array Is Sorted](types/hashmaphashset-lei/167-two-sum-ii-input-array-is-sorted.md)
   * [15 - Three Sum](types/hashmaphashset-lei/15-three-sum.md)
-  * [5](types/hashmaphashset-lei/5.md)
-  * [7](types/hashmaphashset-lei/7.md)
+  * [21 - Merge Two Sorted Lists](types/hashmaphashset-lei/21-merge-two-sorted-lists.md)
   * [Template](types/hashmaphashset-lei/template.md)
 
 ## Fundamentals

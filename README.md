@@ -1,41 +1,27 @@
-# 👋 Welcome to Leetcode Note
+---
+description: Summary of methods
+---
 
-## Overview
+# Data Structure
 
-Here are a couple of example overviews from products with really great docs:
+> When solving LeetCode problems, we'll often encounter a variety of data structures and algorithms. Here are some commonly used methods, techniques, and data structures that are useful for tackling different types of problems on the platform:
 
-> Loom is a video messaging tool that helps you get your message across through instantly shareable videos.
->
-> With Loom, you can record your camera, microphone, and desktop simultaneously. Your video is then instantly available to share through Loom's patented technology.
->
-> — From the [Loom Docs](https://support.loom.com/hc/en-us/articles/360002158057-What-is-Loom-)
 
-> The Mailchimp Marketing API provides programmatic access to Mailchimp data and functionality, allowing developers to build custom features to do things like sync email activity and campaign analytics with their database, manage audiences and campaigns, and more.
->
-> — From the [Mailchimp Marketing API docs](https://mailchimp.com/developer/marketing/docs/fundamentals/)
 
-## Quick links
+String Methods: String Length: String.length() Character Access: String.charAt() Substring: String.substring() Concatenation: String.concat() String Replacement: String.replace() String Splitting: String.split() Case Conversion: String.toUpperCase() / String.toLowerCase() String Searching: String.indexOf() String Comparison: String.equals() / String.equalsIgnoreCase()
 
-{% content-ref url="overview/data-structure/" %}
-[data-structure](overview/data-structure/)
-{% endcontent-ref %}
+Hash Map: HashMap for efficient key-value pair storage and retrieval. containsKey(), get(), put(), remove(), keySet(), etc.
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
-{% endcontent-ref %}
+Two-Pointers: left and right pointers for traversing arrays or strings. Used for problems involving searching, finding pairs, or specific conditions.
 
-## Get Started
+DFS (Depth-First Search) and BFS (Breadth-First Search): Techniques for exploring graphs and trees. DFS: Recursive approach to explore deeper nodes first. BFS: Queue-based approach to explore nodes level by level. Recursion:
 
-We've put together some helpful guides for you to get setup with our product quickly and easily.
+Divide and conquer strategy for solving problems. Often used in tree, graph, and combinatorial problems.
 
-{% content-ref url="fundamentals/getting-set-up/" %}
-[getting-set-up](fundamentals/getting-set-up/)
-{% endcontent-ref %}
+Backtracking: Exploring all possible solutions and discarding ones that do not meet the criteria. Common in problems involving permutations, subsets, and combinations.
 
-{% content-ref url="fundamentals/getting-set-up/setting-permissions.md" %}
-[setting-permissions.md](fundamentals/getting-set-up/setting-permissions.md)
-{% endcontent-ref %}
+Sliding Window: Efficient technique for finding a subarray or substring with specific properties. Useful for problems with contiguous elements, such as maximum/minimum sum subarray.
 
-{% content-ref url="fundamentals/getting-set-up/inviting-members.md" %}
-[inviting-members.md](fundamentals/getting-set-up/inviting-members.md)
-{% endcontent-ref %}
+Greedy Algorithms: Making locally optimal choices to achieve a global optimum. Often used in optimization problems where there's a clear "best" choice at each step.
+
+Dynamic Programming: Solving problems by breaking them down into smaller subproblems and storing their solutions. Techniques include memoization (top-down) and tabulation (bottom-up).
