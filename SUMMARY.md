@@ -11,9 +11,9 @@
   * [▫ LinkedList 链表](overview/data-structure/linkedlist-lian-biao.md)
   * [▫ Binary Tree 二叉树](overview/data-structure/binary-tree-er-cha-shu.md)
   * [▫ DP 动态规划](overview/data-structure/dp-dong-tai-gui-hua.md)
-  * [HashTable](overview/data-structure/hashtable.md)
+* [Problem Summary](overview/problem-summary.md)
 
-## Types
+## 🔻 Types
 
 * [▫ Two Pointers 双指针类](types/two-pointers-shuang-zhi-zhen-lei/README.md)
   * [1. >< 相向双指针](types/two-pointers-shuang-zhi-zhen-lei/1.-xiang-xiang-shuang-zhi-zhen/README.md)
@@ -27,7 +27,7 @@
   * [3. <>背向双指针](types/two-pointers-shuang-zhi-zhen-lei/3.-bei-xiang-shuang-zhi-zhen/README.md)
     * [Palindrome型](types/two-pointers-shuang-zhi-zhen-lei/3.-bei-xiang-shuang-zhi-zhen/palindrome-xing.md)
 * [▫ Recursion 递归类](types/recursion-di-gui-lei/README.md)
-  * [Page 1](types/recursion-di-gui-lei/page-1.md)
+  * [21 - Merge Two Sorted Lists](types/recursion-di-gui-lei/21-merge-two-sorted-lists.md)
 * [▫ Binary Tree 二叉树类](types/binary-tree-er-cha-shu-lei.md)
 * [▫ Binary Search Tree 类](types/binary-search-tree-lei.md)
 * [▫ Bit & Math 位运算与数学](types/bit-math-wei-yun-suan-yu-shu-xue.md)
@@ -42,16 +42,10 @@
   * [🟢 20 - Valid Parentheses](types/stack-lei/20-valid-parentheses.md)
 * [▫ Queue类](types/queue-lei.md)
 * [▫ Graph类](types/graph-lei.md)
-* [▫ Linked List类](types/linked-list-lei.md)
+* [▫ Linked List类](types/linked-list-lei/README.md)
+  * [21 - Merge Two Sorted Lists](types/linked-list-lei/21-merge-two-sorted-lists.md)
 * [▫ HashMap/HashSet类](types/hashmaphashset-lei/README.md)
   * [001 - Two Pointers](types/hashmaphashset-lei/001-two-pointers.md)
   * [167 - Two Sum II - Input Array Is Sorted](types/hashmaphashset-lei/167-two-sum-ii-input-array-is-sorted.md)
   * [15 - Three Sum](types/hashmaphashset-lei/15-three-sum.md)
-  * [21 - Merge Two Sorted Lists](types/hashmaphashset-lei/21-merge-two-sorted-lists.md)
   * [Template](types/hashmaphashset-lei/template.md)
-
-## Fundamentals
-
-* [🛠 Getting set up](fundamentals/getting-set-up/README.md)
-  * [📝 Setting permissions](fundamentals/getting-set-up/setting-permissions.md)
-  * [🧑 Inviting Members](fundamentals/getting-set-up/inviting-members.md)

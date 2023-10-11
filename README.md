@@ -8,8 +8,6 @@ description: Summary of methods
 
 
 
-String Methods: String Length: String.length() Character Access: String.charAt() Substring: String.substring() Concatenation: String.concat() String Replacement: String.replace() String Splitting: String.split() Case Conversion: String.toUpperCase() / String.toLowerCase() String Searching: String.indexOf() String Comparison: String.equals() / String.equalsIgnoreCase()
-
 Hash Map: HashMap for efficient key-value pair storage and retrieval. containsKey(), get(), put(), remove(), keySet(), etc.
 
 Two-Pointers: left and right pointers for traversing arrays or strings. Used for problems involving searching, finding pairs, or specific conditions.
