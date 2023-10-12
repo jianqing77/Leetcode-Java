@@ -2,7 +2,7 @@
 description: '@Stack'
 ---
 
-# 🟢 20 - Valid Parentheses
+# 🟢 0020 - Valid Parentheses
 
 <details>
 

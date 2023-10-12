@@ -1,4 +1,8 @@
-# 🟢 21 - Merge Two Sorted Lists
+---
+description: '@Recursion @Linked List'
+---
+
+# 🟢 0021 - Merge Two Sorted Lists
 
 <details>
 
