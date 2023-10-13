@@ -2,7 +2,7 @@
 description: '@String @Two Pointers'
 ---
 
-# 🟢 0125 - Valid Palindrome
+# 🟢 Valid Palindrome
 
 <details>
 
