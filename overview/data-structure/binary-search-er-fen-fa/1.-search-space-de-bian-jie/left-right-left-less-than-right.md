@@ -1,4 +1,4 @@
-# \[left, right)
+# \[left, right) left < right
 
 <details>
 
@@ -38,7 +38,13 @@ class Solution {
 
 <details>
 
-<summary>变形： find the smallest value in a sorted array >= target value</summary>
+<summary>变形： find the smallest value in a sorted array >= target value </summary>
+
+<mark style="color:red;">寻找左边界</mark>
+
+* 在一个排序数组中找到大于等于目标值的最小值，实际上就是在寻找左边界。
+* 考虑一个升序排序的数组，我们的目标是找到第一个大于或等于给定目标值的元素。这个元素实际上就是一个新的“区间”的开始，这个区间包含的所有元素都大于或等于目标值。因此，这个元素就是我们要找的左边界。
+* 在这种情况下，我们可以使用类似的二分搜索方法。我们不断将数组分成两半，如果中间元素小于目标值，我们就去右半部分继续查找；如果中间元素大于或等于目标值，我们就去左半部分查找。当搜索结束时，左指针将指向第一个大于或等于目标值的元素，也就是我们要找的左边界
 
 An example where using `left < right` would be more appropriate is when you're trying to find the smallest value in a sorted array that is greater than or equal to a target value. This is sometimes known as a "lower bound" search.
 
