@@ -1,4 +1,4 @@
-# 🟢 21 - Merge Two Sorted Lists
+# 🟢 0021 - Merge Two Sorted Lists
 
 <details>
 
