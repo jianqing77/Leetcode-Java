@@ -1,4 +1,4 @@
-# ▫ Binary Search 二分法
+# ▫ Binary Search
 
 **Binary Search经常写错的原因：不清楚区间search space的定义**
 

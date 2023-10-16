@@ -1,4 +1,4 @@
-# ▫ HashTable 哈希表
+# ▫ HashTable
 
 Hash Table is a data structure which organizes data using hash functions
 

@@ -4,6 +4,10 @@
 2. Be familiar with different `traversal` methods;
 3. Use `recursion` to solve binary-tree-related problems;
 
+
+
+## Concepts
+
 <details>
 
 <summary>Concept of tree and Binary Tree</summary>
@@ -39,7 +43,7 @@ The binary tree is the basis for many tree-like data structures including the bi
 
 </details>
 
-### Binary Tree 二叉树
+### 1. Binary Tree 二叉树
 
 <details>
 
@@ -185,7 +189,7 @@ In summary, preorder, in-order, and postorder traversals are special cases of de
 
 ***
 
-<mark style="color:red;">**DFS Implementation: Recursion/ Stack**</mark>
+### 2. DFS Traversal of Binary Tree
 
 ```
     1
@@ -201,11 +205,11 @@ In summary, preorder, in-order, and postorder traversals are special cases of de
 
 <details>
 
-<summary>DFS: Pre-oder Traversal 前序遍历</summary>
+<summary>Pre-oder Traversal 前序遍历</summary>
 
 [Pre-order Traversal](https://leetcode.com/explore/learn/card/data-structure-tree/134/traverse-a-tree/992/#pre-order-traversal): root-> left subtree -> right subtree
 
-* <mark style="color:orange;">**Algorithm**</mark>
+* <mark style="color:orange;">**Algorithm -- recursion**</mark>
   * visit the root node (add  the value to the result list )
   * pre-order traversal of left subtree&#x20;
   * pre-order traversal of right subtree
@@ -241,11 +245,47 @@ class Solution {
 }
 </code></pre>
 
+<mark style="color:orange;">**Algorithm: Stack**</mark>
+
+* Create an empty stack and <mark style="color:yellow;">**push the root node to the stack.**</mark>
+* Run a loop until the stack is empty. In each iteration:
+  * Pop a node from the stack and add its value to the result list.
+  * If the popped node has a right child, push the right child to the stack.
+  * If the popped node has a left child, push the left child to the stack.
+* The reason we <mark style="color:yellow;">**push the right child before the left child**</mark> is that we want the left child to be processed first (since the stack is a <mark style="color:red;">**LIFO**</mark> structure).
+
+```java
+
+public List<Integer> preorderTraversal(TreeNode root) {
+    List<Integer> result = new ArrayList<>();
+    Stack<TreeNode> stack = new Stack<>();
+    
+    if (root != null) {
+        stack.push(root);
+    }
+
+    while (!stack.isEmpty()) {
+        TreeNode node = stack.pop();
+        result.add(node.val);
+
+        if (node.right != null) {
+            stack.push(node.right);
+        }
+
+        if (node.left != null) {
+            stack.push(node.left);
+        }
+    }
+
+    return result;
+}
+```
+
 </details>
 
 <details>
 
-<summary>DFS: Inorder Traversal 中序遍历</summary>
+<summary>Inorder Traversal 中序遍历</summary>
 
 [In-order Traversal](https://leetcode.com/explore/learn/card/data-structure-tree/134/traverse-a-tree/992/#in-order-traversal): left subtree -> root -> right subtree
 
@@ -289,11 +329,42 @@ class Solution {
 }
 ```
 
+<mark style="color:orange;">**Algorithm: stack**</mark>
+
+* Create an empty stack.
+* Initialize a pointer to the root node, let's call it `curr`.
+* Run a loop until `curr` is null and the stack is not empty. In each iteration:
+  * If `curr` is not null, push `curr` to the stack and move `curr` to its left child.
+  * If `curr` is null, pop the top node from the stack, add its value to the result list and make `curr` point to the popped node's right child.
+* This algorithm ensures that we first reach the leftmost node (the smallest element in a BST), process it, then go to its right subtree and repeat the process.
+
+```java
+// Some code
+public List<Integer> inorderTraversal(TreeNode root) {
+    List<Integer> result = new ArrayList<>();
+    Stack<TreeNode> stack = new Stack<>();
+    TreeNode curr = root;
+
+    while (curr != null || !stack.isEmpty()) {
+        while (curr != null) {
+            stack.push(curr);
+            curr = curr.left;
+        }
+
+        curr = stack.pop();
+        result.add(curr.val);
+        curr = curr.right;
+    }
+
+    return result;
+}
+```
+
 </details>
 
 <details>
 
-<summary>DFS: Post-order Traversal</summary>
+<summary> Post-order Traversal 后序遍历</summary>
 
 [Post-order Traversal](https://leetcode.com/explore/learn/card/data-structure-tree/134/traverse-a-tree/992/#post-order-traversal): left subtree ->  right subtree -> root
 
@@ -334,23 +405,167 @@ class Solution {
 }
 ```
 
+Algorithm: Stack
+
+* **Create an empty stack and push the root node to the stack. => same as preorder**
+* Create an empty output list <mark style="color:yellow;">**(LinkedList)**</mark> to store the result.
+* Run a loop until the stack is empty. In each iteration:
+  * Pop a node from the stack and add its value to the front of the result list.
+  * If the popped node has a left child, push it to the stack.
+  * If the popped node has a right child, push it to the stack.
+* The reason we add nodes to the front of the result list is that we want to reverse the order of traversal which would otherwise be root, right, left. Also, we push left child before the right child because we want the right child to be processed first.
+
+```java
+// Some code
+public List<Integer> postorderTraversal(TreeNode root) {
+    LinkedList<Integer> result = new LinkedList<>();
+    Stack<TreeNode> stack = new Stack<>();
+    
+    if (root != null) {
+        stack.push(root);
+    }
+
+    while (!stack.isEmpty()) {
+        TreeNode node = stack.pop();
+        result.addFirst(node.val);
+
+        if (node.left != null) {
+            stack.push(node.left);
+        }
+
+        if (node.right != null) {
+            stack.push(node.right);
+        }
+    }
+
+    return result;
+}
+```
+
+</details>
+
+***
+
+### 3.  BFS Traversal of Binary Tree
+
+<details>
+
+<summary>BFS: Level-order traversal </summary>
+
+BFS: traverse the tree level by level.
+
+Algorithm: algorithm starts with a root node and visit the node itself first. Then traverse its neighbors, traverse its second level neighbors, traverse its third level neighbors, so on and so forth. When we do breadth-first search in a tree, the order of the nodes we visited is in level order.
+
+```
+       1
+      / \
+     2   3
+    / \ / \
+   4  5 6  7
+```
+
+The sequence of nodes visited in a breadth-first search (BFS), or level-order traversal, would be:
+
+```
+1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7
+```
+
+Here's how BFS would work:
+
+1. Start with the root node (1). Add it to the queue.
+2. Remove the first node in the queue (1), visit it, and add its children (2 and 3) to the queue.
+3. Remove the first node in the queue (2), visit it, and add its children (4 and 5) to the queue.
+4. Remove the first node in the queue (3), visit it, and add its children (6 and 7) to the queue.
+5. Remove the first node in the queue (4), visit it. It has no children, so we don't add anything to the queue.
+6. Remove the first node in the queue (5), visit it. It has no children, so we don't add anything to the queue.
+7. Remove the first node in the queue (6), visit it. It has no children, so we don't add anything to the queue.
+8. Remove the first node in the queue (7), visit it. It has no children, so we don't add anything to the queue.
+9. The queue is now empty, so the BFS is complete.
+
+As you can see, BFS visits all the nodes at each level before moving on to the next level, going from left to right.
+
+
+
 </details>
 
 <details>
 
-<summary>BFS: </summary>
+<summary>BFS:  Implementation using QUEUE</summary>
 
+<pre><code>        3
+      /   \
+     9     20
+    /      / \
+   8      15  7
+<strong>Input: root = [3,9,20,8,null,15,7]
+</strong><strong>Output: [[3],[9,20],[8,15,7]]
+</strong></code></pre>
 
+Algorithm:
+
+1. Create an empty queue and <mark style="color:yellow;">enqueue the root node.</mark>
+2. <mark style="color:yellow;">While the queue is not empty</mark>, do the following:
+   * Determine the current level size (i.e., number of nodes in the queue).
+   * For each node in the current level:
+     * Dequeue the node from the queue.
+     * Add the value of the node to the current level's list of values.
+     * If the node has a left child, enqueue the left child.
+     * If the node has a right child, enqueue the right child.
+   * Add the current level's list of values to the list of all levels.
+
+```java
+class Solution {
+    public List<List<Integer>> levelOrder(TreeNode root) {
+        List<List<Integer>> result = new LinkedList<>();
+
+        // If the root node is null, return the empty list
+        if (root == null) {
+            return result;
+        }
+
+        // Step 1: Create an empty queue and enqueue the root node
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+
+        // Step 2: Loop while the queue is not empty
+        while (!queue.isEmpty()) {
+            // Determine the current level size (i.e., number of nodes in the queue)
+            int size = queue.size();
+            List<Integer> subLevel = new LinkedList<>(); // Store the values of the current level
+
+            // For each node in the current level
+            for (int i = 0; i < size; i++) {
+                // Dequeue the node from the queue
+                TreeNode currentRoot = queue.poll();
+
+                // Add the value of the node to the current level's list of values
+                subLevel.add(currentRoot.val);
+
+                // If the node has a left child, enqueue the left child
+                if (currentRoot.left != null) {
+                    queue.add(currentRoot.left);
+                }
+
+                // If the node has a right child, enqueue the right child
+                if (currentRoot.right != null) {
+                    queue.add(currentRoot.right);
+                }
+            }
+
+            // Add the current level's list of values to the list of all levels
+            result.add(subLevel);
+        }
+
+        return result;
+    }
+}
+```
 
 </details>
 
-<details>
+## Recursion相关的变形问题
 
-<summary>Recursion in Binary Tree </summary>
-
-
-
-</details>
+<mark style="color:red;">**Recursion is one of the natural features of a tree**</mark>. Therefore, many tree problems can be solved **recursively**. For each recursive function call, we only focus on the problem for the current node and call the function recursively to solve its children.
 
 [^1]: 
 
