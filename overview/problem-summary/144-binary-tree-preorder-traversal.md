@@ -82,6 +82,7 @@ class Solution {
         // 2. single layer logic: visit the root, preorder left and right
         // 确定单层递归的逻辑：先访问当前节点，然后访问左子树，最后访问右子树
         result.add(<a data-footnote-ref href="#user-content-fn-1">root.val</a>); //注意是value not the root self
+        // recursion shown up
         preOrderHelper(root.left, <a data-footnote-ref href="#user-content-fn-2">result</a>);
         preOrderHelper(root.right, <a data-footnote-ref href="#user-content-fn-3">result</a>);
     }

@@ -59,7 +59,7 @@ You must write an algorithm that runs in <mark style="color:yellow;">`O(log n)`<
 
 <details>
 
-<summary>Code Demo 1: <strong>Iteration binary search</strong></summary>
+<summary>✅ Code Demo 1: <strong>Iteration binary search</strong></summary>
 
 **Algorithm:**
 

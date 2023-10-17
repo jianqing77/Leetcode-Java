@@ -4,7 +4,22 @@
 2. Be familiar with different `traversal` methods;
 3. Use `recursion` to solve binary-tree-related problems;
 
-
+> 做题心得：\
+>
+>
+> 很多都是之前基本题的变形，要熟识没一个binary tree的基本题
+>
+> 1. DFS: pre, in, post order的recursion写法
+> 2. BFS: 写法
+> 3. Max /min depth的写法\
+>
+>
+> Recursion的时候渐渐形成了自己的三要素
+>
+> 1. singly layer logic：考虑本node
+> 2. recursion的实现：考虑left and right subtree
+> 3. termination condition
+> 4.
 
 ## Concepts
 

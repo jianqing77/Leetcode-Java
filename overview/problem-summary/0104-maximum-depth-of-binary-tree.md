@@ -66,7 +66,7 @@ Note: A leaf is a node with no children.
 
 <details>
 
-<summary>✅ Algorithm &#x26; Code Demo: <mark style="background-color:orange;">Bottom-up</mark> Approach (Recursion) </summary>
+<summary>✅ Algorithm &#x26; Code Demo: <mark style="background-color:orange;">Bottom-up</mark>  (Recursion) </summary>
 
 ```java
 class Solution {
@@ -101,7 +101,44 @@ class Solution {
 
 <details>
 
-<summary>Algorithm &#x26; Code Demo: <mark style="background-color:orange;">Top-Down</mark> Approach (Recursion)</summary>
+<summary>Algorithm &#x26; Code Demo: <mark style="background-color:orange;">Top-Down</mark>  (Recursion) -- helper method return int</summary>
+
+```java
+// top down: helper function return teh maxDepth 
+// helper method: params只有root, 而且不需要考虑leaf node
+// 思想和543: calculate max diameter
+class Solution {
+    int maxDepth = 0; // initialize to 0
+
+    public int maxDepth(TreeNode root) {
+        return calculateDepth(root);
+        
+    }
+
+    // 注意这里calculate depth会return value, 而且不用考虑leaf node
+    private int calculateDepth(TreeNode node) {
+        // Termination Condition
+        if (node == null) {
+            return 0;
+        }
+
+        // Calculate the depth of left and right node
+        int leftDepth = calculateDepth(node.left);
+        int rightDepth = calculateDepth(node.right);
+
+        // Update the maxDepth at each node
+        maxDepth = Math.max(maxDepth, Math.max(leftDepth, rightDepth) + 1);
+
+        return Math.max(leftDepth, rightDepth) + 1;
+    }
+}
+```
+
+</details>
+
+<details>
+
+<summary>Algorithm &#x26; Code Demo: <mark style="background-color:orange;">Top-Down</mark>  (Recursion) -- helper method return void</summary>
 
 ```java
 class Solution {

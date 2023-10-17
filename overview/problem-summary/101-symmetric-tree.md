@@ -38,6 +38,10 @@ Bonus points if you could solve it both recursively and iteratively.
 
 ### 解题思路
 
+* Symmetric: 是不是invert 左右两个sub tree之后 判断是否相等呢? 应该不是，因为example 2里边就不是
+
+<!---->
+
 * 这道题是几道题的综合题。将根节点的左字数反转二叉树，然后再和根节点的右节点进行比较，是否完全相等。
 * 反转二叉树是第 226 题。判断 2 颗树是否完全相等是第 100 题。
 
@@ -58,6 +62,11 @@ Bonus points if you could solve it both recursively and iteratively.
 <summary>Code Demo </summary>
 
 ```java
+class Solution {
+    public boolean isSymmetric(TreeNode root) {
+        
+    }
+}
 ```
 
 </details>
