@@ -48,12 +48,15 @@
   * [🟢 0104 - Maximum Depth of Binary Tree](overview/problem-summary/0104-maximum-depth-of-binary-tree.md)
   * [🟢 0111 - Minimum Depth of Binary Tree](overview/problem-summary/0111-minimum-depth-of-binary-tree.md)
   * [🟢 0110 - Balanced Binary Tree](overview/problem-summary/0110-balanced-binary-tree.md)
-  * [0226 - Invert Binary Tree](overview/problem-summary/0226-invert-binary-tree.md)
+  * [🟢 0226 - Invert Binary Tree](overview/problem-summary/0226-invert-binary-tree.md)
+  * [543 - Diameter of Binary Tree](overview/problem-summary/543-diameter-of-binary-tree.md)
+  * [101 - Symmetric Tree](overview/problem-summary/101-symmetric-tree.md)
+  * [572 - Subtree of Another Tree](overview/problem-summary/572-subtree-of-another-tree.md)
+  * [0](overview/problem-summary/0.md)
   * [1](overview/problem-summary/1.md)
   * [2](overview/problem-summary/2.md)
   * [3](overview/problem-summary/3.md)
   * [4](overview/problem-summary/4.md)
-  * [5](overview/problem-summary/5.md)
 
 ## 🔻 Types
 
