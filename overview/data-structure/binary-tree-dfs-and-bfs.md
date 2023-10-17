@@ -1,4 +1,4 @@
-# ▫ Tree & Binary Tree
+# ▫ Binary Tree: DFS & BFS
 
 1. Understand the concept of a `tree` and a `binary tree`;
 2. Be familiar with different `traversal` methods;
@@ -176,9 +176,11 @@ root 6: 左右子树高度分别为0和1，高度差为1。
 **Depth-First Search (DFS)** and **Breadth-First Search (BFS)** are two common traversal methods for graphs and trees.
 
 * <mark style="color:yellow;">**Depth-First Search**</mark><mark style="color:yellow;">:</mark> DFS starts at the root and explores as far as possible along each branch before backtracking. In the context of a tree traversal, DFS can be further classified into preorder, in-order, and postorder traversal.
-  * **Pre-order Traversal**: The visit order is "Root -> Left Subtree -> Right Subtree".
-  * **In-order Traversal**: The visit order is "Left Subtree -> Root -> Right Subtree".
-  * **Post-order Traversal**: The visit order is "Left Subtree -> Right Subtree -> Root".
+  * <mark style="color:red;">**Pre-order**</mark>** Traversal**: The visit order is "Root -> Left Subtree -> Right Subtree".
+    * top down&#x20;
+  * <mark style="color:red;">**In-order**</mark>** Traversal**: The visit order is "Left Subtree -> Root -> Right Subtree".
+  * <mark style="color:red;">**Post-order**</mark>** Traversal**: The visit order is "Left Subtree -> Right Subtree -> Root".
+    * bottom up
 * <mark style="color:yellow;">**Breadth-First Search**</mark><mark style="color:yellow;">:</mark> BFS starts at the root and visits nodes in a level by level manner (i.e., visiting each node on a level before going to a lower level). All nodes are self first visited before all of their successors.
 
 In summary, preorder, in-order, and postorder traversals are special cases of depth-first search, where nodes are visited first in the deeper part of the tree and then backtracked to visit sibling nodes. Breadth-first search, on the other hand, visits nodes at shallower depths first, i.e., it visits sibling nodes on the same level before moving to the next level.
@@ -505,9 +507,9 @@ Algorithm:
 
 1. Create an empty queue and <mark style="color:yellow;">enqueue the root node.</mark>
 2. <mark style="color:yellow;">While the queue is not empty</mark>, do the following:
-   * Determine the current level size (i.e., number of nodes in the queue).
+   * <mark style="color:green;">Determine the current level size</mark> (i.e., number of nodes in the queue).
    * For each node in the current level:
-     * Dequeue the node from the queue.
+     * <mark style="color:green;">**Dequeue the node**</mark> from the queue.
      * Add the value of the node to the current level's list of values.
      * If the node has a left child, enqueue the left child.
      * If the node has a right child, enqueue the right child.
@@ -566,6 +568,12 @@ class Solution {
 ## Recursion相关的变形问题
 
 <mark style="color:red;">**Recursion is one of the natural features of a tree**</mark>. Therefore, many tree problems can be solved **recursively**. For each recursive function call, we only focus on the problem for the current node and call the function recursively to solve its children.
+
+Top down & Bottom Up Appraoch
+
+* 无论是从顶向下（top-down）方法还是从底向上（bottom-up）方法，都属于深度优先搜索（DFS，Depth-First Search）的一部分。
+* 在top down的方法中，我们首先访问节点本身，然后递归地访问子节点。这种方法也被称为前序遍历（pre-order traversal），因为我们首先处理当前节点，然后处理它的子节点。
+* 在bottom up的方法中，我们首先递归地访问子节点，然后处理节点本身。这种方法也被称为后序遍历（post-order traversal），因为我们首先处理子节点，然后处理当前节点。
 
 [^1]: 
 
