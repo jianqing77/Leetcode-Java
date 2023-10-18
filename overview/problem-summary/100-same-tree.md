@@ -138,7 +138,7 @@ class Solution {
 
 <details>
 
-<summary>Algorithm: Traversal &#x26; form a list -- BFS  讨厌写BFS</summary>
+<summary>Algorithm: Traversal &#x26; form a list -- BFS  讨厌写BFS但是这个要熟练</summary>
 
 ```java
 class Solution {
@@ -150,21 +150,22 @@ class Solution {
     }
 
     private List<Integer> valuesOfTree(TreeNode root) {
-        List<Integer> values = new ArrayList<>();
+        List<Integer> resultList = new ArrayList<>();
         Queue<TreeNode> queue = new LinkedList<>();
-        queue.offer(root);
+        queue.add(root);
         
         while (!queue.isEmpty()) {
-            TreeNode node = queue.poll();
+        
+            TreeNode currNode = queue.poll();
             
-            if (node == null) {
-                values.add(null);
+            if (currNode == null) {
+                resultList.add(null);
                 continue;
             }
             
-            values.add(node.val);
-            queue.offer(node.left);
-            queue.offer(node.right);
+            resultList.add(currNode.val);
+            queue.offer(currNode.left);
+            queue.offer(currNode.right);
         }
         
         return values;
@@ -178,7 +179,14 @@ class Solution {
 
 <summary>Code Analysis</summary>
 
+**Time Complexity:**
 
+* The function will traverse every node in both trees, therefore, the time complexity is O(N), where N is the number of nodes in the trees.
+* Each call of `isSameTree` checks if the current pair of nodes are equal, then recursively calls itself on the pairs of left and right children.
+
+**Space Complexity:**
+
+* The worst-case space complexity is also O(N) because in a skewed tree (a tree where each node only has one child), the maximum depth of the recursive call stack will be N.
 
 </details>
 
