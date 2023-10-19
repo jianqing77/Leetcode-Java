@@ -26,3 +26,56 @@ To check if a nested list contains all the sublists of another nested list in Ja
      System.out.println("list1 does not contain all sublists of list2.");
  }
 ```
+
+3. 如何得到一个list的sublist
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        // Create a list and add some integers
+        List<Integer> list = new ArrayList<>();
+        list.add(10);
+        list.add(20);
+        list.add(30);
+        list.add(40);
+        list.add(50);
+
+        // Store the original length
+        int originalSize = list.size();
+
+        // Add more elements
+        list.add(60);
+        list.add(70);
+        list.add(80);
+
+        // Create a sublist using the original length
+        List<Integer> sublist = list.subList(0, originalSize);
+
+        System.out.println(sublist); // Outputs: [10, 20, 30, 40, 50]
+    }
+}
+```
+
+3.  remove掉list中的element
+
+    1. by index:&#x20;
+       1.  <mark style="color:red;">**remove the last element**</mark> from the array list: 经常在back track中用到
+
+           `list.remove(`<mark style="color:yellow;">`list.size() - 1`</mark>`)`
+    2. by value
+
+    <pre class="language-java"><code class="lang-java"><strong>List&#x3C;String> list = new ArrayList&#x3C;>();
+    </strong>list.add("Apple");
+    list.add("Banana");
+    list.add("Cherry");
+
+    String removedElement = list.remove(1); // Removes "Bananaby value
+
+    List&#x3C;String> list = new ArrayList&#x3C;>();
+    list.add("Apple");
+    list.add("Banana");
+    list.add("Cherry");
+
+    boolean isRemoved = list.remove("Banana"); // Returns true and removes "Banana"
+    </code></pre>
+

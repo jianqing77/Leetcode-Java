@@ -106,7 +106,7 @@ Here's a visualization of how your original code operates:
 
 <details>
 
-<summary>Algorithm: use back track and helper method </summary>
+<summary>✅ Algorithm &#x26; Code: use back track and helper method </summary>
 
 ```java
 // input:[1, 2, 3, 4, 5]
@@ -190,9 +190,104 @@ Now, let's go through your code with this tree:
 
 <details>
 
-<summary>Code Analysis</summary>
+<summary>✅✅ Algorithm: do back track for the leaf node -- inspired by 113</summary>
+
+通过113之后修改的写法：
+
+* 在helper method中，\ <mark style="color:yellow;">**除了null node, 无论是leaf node和普通node**</mark><mark style="color:red;">**都需要backtrack到上一个节点**</mark>
+
+<pre class="language-sql"><code class="lang-sql"><strong>1. 处理null node
+</strong><strong>2. 标记当前node,用于backtrack
+</strong><strong>3. 处理当前node
+</strong><strong>4. 用 IF ELSE
+</strong><strong>if (leaf node) {
+</strong>    do the termination
+} else {
+    do the recursion and pass the 共享变变量
+}
+5. backtrack
+</code></pre>
+
+<mark style="background-color:purple;">**为什么虽然String是个reference type，但是我们在line 18中把pathString加到resultPathList中的时候，pathString不会随着recursion的改变而改变？**</mark>
+
+* 对于String和StringBuilder，它们是**引用类型**。
+* <mark style="color:yellow;">**String是不可变的**</mark>，也就是说一旦一个String对象被创建，它的值就不能改变。如果你对一个<mark style="color:yellow;">**String对象进行修改（比如拼接或者剪裁），Java实际上会**</mark><mark style="color:red;">**创建一个新的String对象来存储修改后的字符串**</mark><mark style="color:yellow;">**，原来的String对象不会被改变**</mark>。
+* 相比之下，StringBuilder是可变的。如果你对一个StringBuilder对象进行修改，这个修改会直接影响到这个对象本身，而不会创建一个新的对象。因此，StringBuilder通常用于需要频繁修改字符串的情况，因为它的性能比String更好。
+
+{% code lineNumbers="true" %}
+```java
+class Solution {
+    public List<String> binaryTreePaths(TreeNode root) {
+        List<String> resultPathList = new ArrayList<>();
+        StringBuilder pathString = new StringBuilder();
+        generatePaths(root, resultPathList, pathString);
+        return resultPathList;
+    }
+    
+    private void generatePaths(TreeNode root, List<String> resultPathList, StringBuilder pathString) {
+        if (root == null) {   // 1. 处理null node
+            return;
+        }
+        
+        int len = pathString.length(); // 2. 标记当前node, 用于backtrack
+        pathString.append(root.val);    // 3. 处理当前node
+        
+        if (root.left == null && root.right == null) { // 4. if lese
+            resultPathList.add(pathString.toString()); // add pathString to result list when we reach a leaf node
+        } else {
+            pathString.append("->");
+            generatePaths(root.left, resultPathList, pathString);
+            generatePaths(root.right, resultPathList, pathString);
+        }
+        
+        pathString.setLength(len); // 5.backtrack
+    }
+}
+```
+{% endcode %}
 
 
+
+</details>
+
+<details>
+
+<summary>Algoritm Summary</summary>
+
+The main idea of this algorithm is depth-first search (DFS) based on recursion and backtracking. Here are the steps of the algorithm:
+
+<mark style="color:yellow;">**Main Function:**</mark> <mark style="color:blue;">**binaryTreePaths(TreeNode root)**</mark>
+
+* Initialize an empty result list `resultPathList` and a StringBuilder `pathString` to hold the path.
+* Call the helper function generatePaths with the root node, result list, and path string as arguments. By calling this helper function, we will update the resultPathList
+
+<mark style="color:yellow;">**Helper Function:**</mark> <mark style="color:blue;">generatePaths(TreeNode root, List\<String> resultPathList, StringBuilder pathString)</mark>
+
+<mark style="color:orange;">**Termination condition: null and leaf node**</mark>
+
+* <mark style="color:blue;">**Null Node:**</mark> check if the current node is null:
+  * If it is, then return.
+  * This is the termination condition for handling null nodes, including the initial root node and the children of leaf nodes.
+* <mark style="color:blue;">**Leaf Node:**</mark> Check if the current node is a leaf node (i.e., both left and right children are null):
+  * If it is, append the leaf node's value to pathString (no arrow needed), then add the path string to the result list. Then return, as leaf nodes have no children for further recursion.
+
+Now focus on <mark style="color:orange;">**node with at one/two node.**</mark> If the current node is neither null nor a leaf node, process the current node:
+
+* <mark style="color:blue;">**Append**</mark> the current node's value and an arrow to pathString.&#x20;
+* <mark style="color:red;">**Backtracking Preparation:**</mark> Before processing the left child node, mark the current length of the path string for later backtracking.
+* Recursively process the left child node: call <mark style="color:blue;">**generatePaths(root.left, resultPathList, pathString).**</mark>
+* <mark style="color:red;">**Backtrack:**</mark> before processing the right child node, undo the modification to the path string by setting its length back to the previous length.
+* Recursively process the right child node: call <mark style="color:blue;">**generatePaths(root.right, resultPathList, pathString).**</mark>
+
+In this way, we can traverse the entire tree and for each leaf node, we generate and save a path from the root node to it.
+
+**Time Complexity:**
+
+The time complexity of this solution is O(N), where N is the number of nodes in the binary tree. This is because we visit each node exactly once during the DFS traversal.
+
+**Space Complexity:**
+
+The space complexity is O(H), where H represents the height of the tree. This is due to the maximum amount of space that will be used by the call stack during the recursion.
 
 </details>
 
@@ -228,7 +323,8 @@ void backtracking(参数){
 4. <mark style="color:yellow;">**StringBuilder的method**</mark>
    1. StringBuilder是个<mark style="color:orange;">**class**</mark>: StringBuilder sb = new <mark style="color:orange;">**StringBuilder();**</mark>
    2. add to StringBuilder: sb.<mark style="color:orange;">**append**</mark>("aadhaks")
-   3. set the length of StringBuilder: sb.<mark style="color:orange;">**setLength**</mark>(newLength)\
+   3. set the length of StringBuilder: sb.<mark style="color:orange;">**setLength**</mark>(newLength)
+   4. convert StringBuilder to string: sb.toString()\
 
 
 </details>
