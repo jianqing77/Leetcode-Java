@@ -66,10 +66,14 @@
   * [🟠 103. Binary Tree Zigzag Level Order Traversal](overview/problem-summary/103.-binary-tree-zigzag-level-order-traversal.md)
   * [863 - All Nodes Distance K in Binary Tree](overview/problem-summary/863-all-nodes-distance-k-in-binary-tree.md)
   * [🟠 105 - Construct Binary Tree from Preorder and Inorder Traversal](overview/problem-summary/105-construct-binary-tree-from-preorder-and-inorder-traversal.md)
-  * [Construct Binary Tree from Inorder and Postorder Traversal](overview/problem-summary/construct-binary-tree-from-inorder-and-postorder-traversal.md)
+  * [🟠 106 - Construct Binary Tree from InOrder and Postorder Traversal](overview/problem-summary/106-construct-binary-tree-from-inorder-and-postorder-traversal.md)
+  * [889 -  Construct Binary Tree from Preorder and Postorder Traversal](overview/problem-summary/889-construct-binary-tree-from-preorder-and-postorder-traversal.md)
   * [107 - Binary Tree Level Order Traversal II](overview/problem-summary/107-binary-tree-level-order-traversal-ii.md)
   * [314 -  Binary Tree Vertical Order Traversal](overview/problem-summary/314-binary-tree-vertical-order-traversal.md)
+  * [1](<overview/problem-summary/1 (1).md>)
   * [2](overview/problem-summary/2.md)
+  * [3](overview/problem-summary/3.md)
+  * [4](overview/problem-summary/4.md)
 
 ## 🔻 Types
 

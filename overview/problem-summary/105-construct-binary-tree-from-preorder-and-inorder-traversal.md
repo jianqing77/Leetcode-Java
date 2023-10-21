@@ -26,8 +26,6 @@ Return the following binary tree:
    15   7
 ```
 
-
-
 **Constraints:**
 
 * `1 <= preorder.length <= 3000`
@@ -44,9 +42,15 @@ Return the following binary tree:
 
 <summary>解题思路 Intuition </summary>
 
-pre-order: root, left, right
-
+pre-order: root, left, right\
 in-order: left root right
+
+* 根据二叉树的 inOrder traversal 和 preOrder Traversal 结果来重建二叉树。这可以通过递归来实现。
+* Key: preOrder Traversal: 第一个元素是root节点。inOrder traversal: root.left的nodes是left subtree, root.right的所有nodes是right subtree。
+* 我们可以将这些信息结合起来，
+  * 先找到preOrder遍历的first element元素（即根节点）=> 要更新
+  * 然后在中序遍历中找到根节点，将数组分为两部分，左边是左子树，右边是右子树，
+  * 然后递归地重建左子树和右子树。
 
 </details>
 
@@ -80,18 +84,7 @@ in-order: left root right
 
 <details>
 
-<summary>Code Demo </summary>
-
-<mark style="color:yellow;">**Why we initialize int\[] preorder; int\[] inorder; as global variables?**</mark>
-
-1. **Simplify function signatures:** The `constructTree` method is recursive, so it needs to have access to the `preorder` and `inorder` arrays in each recursive call. If these arrays were not global, they would need to be passed as arguments to the `constructTree` method, complicating the function signature.
-2. **Preserve state across function calls:** The `preorder` array is traversed sequentially from the start to the end during the construction of the tree. The `preStart` index keeps track of the current position in the `preorder` array across multiple function calls. Making `preorder` and `preStart` global enables this state to be preserved across all calls to `constructTree`.
-3. **Reduce memory usage:** If the `preorder` and `inorder` arrays were passed as arguments to each recursive call, new array objects could potentially be created for each function call, which would increase the memory usage of the program. Using global variables avoids this potential issue.
-
-<mark style="color:yellow;">**Helper Method constructTree 是focus在inOrder的？**</mark>
-
-* The constructTree method does indeed focus on the <mark style="color:yellow;">**in-order array**</mark>: The reason it focuses on in-order is because <mark style="color:purple;">**in-order is what allows us to distinguish between nodes that are on the left of the current root and nodes that are on the right.**</mark> After finding the root node in the inorder array, everything to the left of the root forms the left subtree, and everything to the right forms the right subtree.
-* &#x20;it also uses the <mark style="color:yellow;">**preorder array**</mark> : determine the root of each subtree.&#x20;
+<summary>✅  Code Demo </summary>
 
 ```java
 class Solution {
@@ -191,6 +184,17 @@ right inorder = []
 
 ```
 
+<mark style="color:yellow;">**Why we initialize int\[] preorder; int\[] inorder; as global variables?**</mark>
+
+1. **Simplify function signatures:** The `constructTree` method is recursive, so it needs to have access to the `preorder` and `inorder` arrays in each recursive call. If these arrays were not global, they would need to be passed as arguments to the `constructTree` method, complicating the function signature.
+2. **Preserve state across function calls:** The `preorder` array is traversed sequentially from the start to the end during the construction of the tree. The `preStart` index keeps track of the current position in the `preorder` array across multiple function calls. Making `preorder` and `preStart` global enables this state to be preserved across all calls to `constructTree`.
+3. **Reduce memory usage:** If the `preorder` and `inorder` arrays were passed as arguments to each recursive call, new array objects could potentially be created for each function call, which would increase the memory usage of the program. Using global variables avoids this potential issue.
+
+<mark style="color:yellow;">**Helper Method constructTree 是focus在inOrder的？**</mark>
+
+* The constructTree method does indeed focus on the <mark style="color:yellow;">**in-order array**</mark>: The reason it focuses on in-order is because <mark style="color:purple;">**in-order is what allows us to distinguish between nodes that are on the left of the current root and nodes that are on the right.**</mark> After finding the root node in the inorder array, everything to the left of the root forms the left subtree, and everything to the right forms the right subtree.
+* &#x20;it also uses the <mark style="color:yellow;">**preorder array**</mark> : determine the root of each subtree.&#x20;
+
 </details>
 
 <details>
@@ -215,9 +219,17 @@ Therefore, the total space complexity is O(n + n) = O(n).
 
 <details>
 
-<summary>心得 Key Points</summary>
+<summary>✅ 心得 Key Points</summary>
 
 1. 额 很难做出来的一道题
 2. 关键点：用preorder array来找root, inorder array对应的root的左边是left subtree, right为right subtree
+3. 简化写法：
+
+```java
+        TreeNode root = new TreeNode(preorder[preorderRootIndex++]);
+                            ||
+        TreeNode root = new TreeNode(preorder[preorderRootIndex]);
+        preorderRootIndex++; 
+```
 
 </details>

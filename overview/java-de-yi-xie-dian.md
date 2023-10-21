@@ -73,5 +73,68 @@ In summary, Java is strictly "pass-by-value". When we pass a primitive type to a
 
 </details>
 
+<details>
+
+<summary>Java: prefix and postfix operator</summary>
+
+<mark style="background-color:orange;">**Postfix Operator**</mark>
+
+The <mark style="color:yellow;">**postfix operator**</mark> (++/ `--`) in Java is used to increase/decrease the value of a variable by 1, but <mark style="color:purple;">**the value is returned first before the  operation occurs.**</mark>
+
+```java
+int a = 10;
+System.out.println(a--); // prints 10
+System.out.println(a);   // prints 9
+```
+
+1. The current value of `a` (which is 10) is returned.
+2. The value of `a` is decreased by 1, so `a` becomes 9.
+
+However, because the current value is returned before the decrement operation occurs, the first `println` statement prints 10, not 9. The new value of `a` (which is 9) isn't revealed until the second `println` statement.
+
+<pre class="language-java"><code class="lang-java"><strong>TreeNode root = new TreeNode(postorder[postorderRootIndex]);
+</strong>postorderRootIndex--;
+// Simplized:
+TreeNode root = new TreeNode(postorder[postorderRootIndex--]);
+</code></pre>
+
+```java
+for (int i = 0; i < array.length; i++) {
+    System.out.println(array[i]);
+}
+
+// Simplized:
+for (int i = 0; i < array.length; System.out.println(array[i++])); 
+```
+
+```java
+while(node != null) {
+    System.out.println(node.val);
+    node = node.next;
+}
+// Simplized:
+while(node != null) {
+    System.out.println((node = node.next).val);
+}
+```
+
+<mark style="background-color:orange;">**Prefix Operator**</mark>
+
+This behavior contrasts with the prefix operator (++/`--`), <mark style="color:purple;">**which increase/decreases the value first before returning it:**</mark>
+
+```java
+int a = 10;
+System.out.println(--a); // prints 9
+```
+
+In the println statement, `--a` is used. Here's what happens:
+
+1. The value of `a` is decreased by 1, so `a` becomes 9.
+2. The new value of `a` (which is 9) is returned.
+
+So, the `println` statement prints 9, not 10.
+
+</details>
+
 
 
