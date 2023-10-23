@@ -1,4 +1,4 @@
-# 🟢 101 - Symmetric Tree
+# 🟢 0101 - Symmetric Tree
 
 <details>
 

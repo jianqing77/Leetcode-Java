@@ -2,7 +2,7 @@
 description: '@Binary Tree @String @Backtracking  @Depth-First Search'
 ---
 
-# 🟢 257 - Binary Tree Paths
+# 🟢 0257 - Binary Tree Paths
 
 <details>
 

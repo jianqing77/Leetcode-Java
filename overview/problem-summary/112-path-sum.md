@@ -2,7 +2,7 @@
 description: '@Backtracking @Tree @Depth-First Search'
 ---
 
-# 🟢 112 - Path Sum
+# 🟢 0112 - Path Sum
 
 <details>
 

@@ -2,7 +2,7 @@
 description: Depth-First Search  Binary Tree
 ---
 
-# 🟠 236 - Lowest Common Ancestor of a Binary Tree
+# 🟠 0236 - Lowest Common Ancestor of a Binary Tree
 
 <details>
 

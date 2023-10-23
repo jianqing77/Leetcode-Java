@@ -1,4 +1,4 @@
-# 🟢 572 - Subtree of Another Tree
+# 🟢 0572 - Subtree of Another Tree
 
 <details>
 

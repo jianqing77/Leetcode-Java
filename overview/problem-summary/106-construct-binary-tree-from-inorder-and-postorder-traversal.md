@@ -1,4 +1,4 @@
-# 🟠 106 - Construct Binary Tree from InOrder and Postorder Traversal
+# 🟠 0106 - Construct Binary Tree from InOrder and Postorder Traversal
 
 <details>
 
