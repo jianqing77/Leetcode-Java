@@ -1,4 +1,4 @@
-# 🟠 199 -  Binary Tree Right Side View
+# 🟠 0199 -  Binary Tree Right Side View
 
 
 
@@ -122,6 +122,12 @@ class Solution {
         findRightSideNodes(node.left, resultList, level + 1);
     }
 ```
+
+<mark style="color:yellow;">**Why use level as an indicator:**</mark>
+
+* The level of a node in a binary tree is a useful indicator of its depth from the root node.
+* By comparing the size of the result list with the level of each node, we can identify the first node encountered at each level. This works because the size of the result list effectively represents the number of levels we have fully traversed so far.
+* Since we are performing a right-first DFS, the first node we encounter at each level will be the rightmost node when viewed from the right side, which is exactly what we need for the right side view.
 
 ```
     1          Level 0 - Add 1 to the resultList -> [1]
