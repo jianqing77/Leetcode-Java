@@ -1,68 +1,8 @@
 # ▫ Linked List类
 
+<table data-full-width="true"><thead><tr><th width="347"></th><th width="359"></th><th></th></tr></thead><tbody><tr><td><span data-gb-custom-inline data-tag="emoji" data-code="1f7e2">🟢</span><a data-mention href="../../overview/problem-summary/0876-middle-of-the-linked-list.md">0876-middle-of-the-linked-list.md</a></td><td>@TwoPointers(Fast&#x26;Slow)</td><td></td></tr><tr><td><span data-gb-custom-inline data-tag="emoji" data-code="1f7e2">🟢</span><a data-mention href="../../overview/problem-summary/0021-merge-two-sorted-lists.md">0021-merge-two-sorted-lists.md</a></td><td>@Recursion @Linked List</td><td></td></tr><tr><td><span data-gb-custom-inline data-tag="emoji" data-code="1f7e2">🟢</span><a data-mention href="../../overview/problem-summary/0206-reverse-linked-list.md">0206-reverse-linked-list.md</a></td><td>@Linked List @Recursion @Iteration</td><td></td></tr><tr><td><span data-gb-custom-inline data-tag="emoji" data-code="1f7e0">🟠</span><a data-mention href="../../overview/problem-summary/0234-palindrome-linked-list.md">0234-palindrome-linked-list.md</a></td><td>combine 876, 206</td><td></td></tr><tr><td><span data-gb-custom-inline data-tag="emoji" data-code="1f7e0">🟠</span><a data-mention href="../../overview/problem-summary/143-reorder-list.md">143-reorder-list.md</a></td><td>combine 876,206,21</td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr></tbody></table>
+
+<table data-header-hidden data-full-width="true"><thead><tr><th width="125"></th><th width="428"></th><th></th></tr></thead><tbody><tr><td>146 </td><td><a href="https://leetcode.com/problems/lru-cache">LRU Cache</a></td><td>Medium</td></tr><tr><td>2</td><td><a href="https://leetcode.com/problems/add-two-numbers">Add Two Numbers</a></td><td>Medium</td></tr><tr><td>21</td><td><a href="https://leetcode.com/problems/merge-two-sorted-lists"><del>Merge Two Sorted Lists</del></a></td><td>Easy</td></tr><tr><td>234</td><td><a href="https://leetcode.com/problems/palindrome-linked-list"><del>Palindrome Linked List</del></a></td><td>Easy</td></tr><tr><td>138</td><td><a href="https://leetcode.com/problems/copy-list-with-random-pointer">Copy List with Random Pointer</a></td><td>Medium</td></tr><tr><td>1472</td><td><a href="https://leetcode.com/problems/design-browser-history">Design Browser History</a></td><td>Medium</td></tr><tr><td>206</td><td><a href="https://leetcode.com/problems/reverse-linked-list"><del>Reverse Linked List</del></a></td><td>Easy</td></tr><tr><td>23</td><td><a href="https://leetcode.com/problems/merge-k-sorted-lists">Merge k Sorted Lists</a></td><td>Hard</td></tr><tr><td>25</td><td><a href="https://leetcode.com/problems/reverse-nodes-in-k-group">Reverse Nodes in k-Group</a></td><td>Hard</td></tr><tr><td>143</td><td><a href="https://leetcode.com/problems/reorder-list"><del>Reorder List</del></a></td><td>Medium</td></tr><tr><td>460</td><td><a href="https://leetcode.com/problems/lfu-cache">LFU Cache</a></td><td>Hard</td></tr><tr><td>876</td><td><a href="https://leetcode.com/problems/middle-of-the-linked-list"><del>Middle of the Linked List</del></a></td><td>Easy</td></tr><tr><td>445</td><td><a href="https://leetcode.com/problems/add-two-numbers-ii">Add Two Numbers II</a></td><td>Medium</td></tr><tr><td>19</td><td><a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list">Remove Nth Node From End of List</a></td><td>Medium</td></tr><tr><td>92</td><td><a href="https://leetcode.com/problems/reverse-linked-list-ii">Reverse Linked List II</a></td><td>Medium</td></tr><tr><td>706</td><td><a href="https://leetcode.com/problems/design-hashmap">Design HashMap</a></td><td>Easy</td></tr><tr><td>1171</td><td><a href="https://leetcode.com/problems/remove-zero-sum-consecutive-nodes-from-linked-list">Remove Zero Sum Consecutive Nodes from Linked List</a></td><td>Medium</td></tr><tr><td>24</td><td><a href="https://leetcode.com/problems/swap-nodes-in-pairs">Swap Nodes in Pairs</a></td><td>Medium</td></tr><tr><td>432</td><td><a href="https://leetcode.com/problems/all-oone-data-structure">All O`one Data Structure</a></td><td>Hard</td></tr><tr><td>86</td><td><a href="https://leetcode.com/problems/partition-list">Partition List</a></td><td>Medium</td></tr><tr><td>141</td><td><a href="https://leetcode.com/problems/linked-list-cycle">Linked List Cycle</a></td><td></td></tr></tbody></table>
+
 ```java
-public class ListNode {
- 
-      int val;
-      ListNode next;
-      
-      ListNode() {}
-      ListNode(int val) { 
-            this.val = val; 
-      }
-      ListNode(int val, ListNode next) { 
-            this.val = val; 
-            this.next = next; 
-      }
- }
-
 ```
-
-{% hint style="success" %}
-Why define 3 Constructors?
-{% endhint %}
-
-The three constructors in the `ListNode` class provide flexibility in creating nodes for different scenarios when dealing with a singly linked list. Here are examples for each constructor:
-
-1.  **Default Constructor**: `ListNode() {}`
-
-    The default constructor is used when you want to create a new node, but you don't have the value or the next node at the moment of creation.
-
-    ```
-    ListNode node = new ListNode();
-    // Some other code...
-    node.val = 5;  // set value later
-    node.next = null;  // set next node later
-
-    ```
-2.  **Single Argument Constructor**: `ListNode(int val) { this.val = val; }`
-
-    This constructor is useful when you know the value of the node but don't have the next node yet, or this is the last node in the list.
-
-    ```
-    ListNode lastNode = new ListNode(10);
-    ```
-3.  **Two Argument Constructor**: `ListNode(int val, ListNode next) { this.val = val; this.next = next; }`
-
-    This constructor is used when you know both the value of the new node and which node it should point to next. This is particularly useful when inserting a node into the middle of a list.
-
-    javaCopy
-
-    ```
-    ListNode nextNode = new ListNode(15);
-    ListNode newNode = new ListNode(10, nextNode);
-    ```
-
-In summary, different constructors are used to create nodes in different scenarios. This is a common practice in object-oriented programming, providing the flexibility to create objects in various states.
-
-{% hint style="success" %}
-`list1 = [1, 2, 4] =>` list1<mark style="color:yellow;">`.val = 1`</mark>
-{% endhint %}
-
-In the context of a singly linked list, <mark style="background-color:orange;">**list1**</mark> <mark style="background-color:orange;"></mark><mark style="background-color:orange;">would be a reference to the</mark> <mark style="background-color:orange;"></mark><mark style="background-color:orange;">**head node**</mark> <mark style="background-color:orange;"></mark><mark style="background-color:orange;">of the list.</mark> <mark style="background-color:orange;"></mark><mark style="background-color:orange;">**When you say**</mark><mark style="background-color:orange;">** **</mark><mark style="background-color:orange;">**`list1.val`**</mark><mark style="background-color:orange;">**, it will return the value of the HEAD node.**</mark>
-
-Given your example where `list1` represents the linked list `[1,2,4]`, `list1.val` would return `1`, which is the value of the head node of the list.
-
-To access the values of the subsequent nodes, you would need to follow the `next` references. For example, `list1.next.val` would return `2`, and `list1.next.next.val` would return `4`.
-
-Please note that you would need to ensure that the `next` node you are trying to access is not `null` to avoid a `NullPointerException`.

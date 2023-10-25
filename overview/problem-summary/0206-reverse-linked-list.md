@@ -1,5 +1,5 @@
 ---
-description: '@Linked List @Recursion'
+description: '@Linked List @Recursion @Iteration'
 ---
 
 # 🟢 0206 - Reverse Linked List

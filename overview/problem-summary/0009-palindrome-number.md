@@ -116,7 +116,7 @@ class Solution {
 <mark style="color:green;">注意:</mark>
 
 * while loop的condition的界定：<mark style="color:blue;">**while x > revertedHalf**</mark> => Continue the loop until x is less than or equal to the reverted half
-* 如何update the reverted half <mark style="color:blue;">**revertedHalf = revertedHalf \* 10 + x % 10;**</mark>\ <mark style="color:blue;">**=>**</mark> pop off the last digit of x && add it to reverted half && orginal reverted half need to \* 10
+* 如何update the reverted half <mark style="color:blue;">**revertedHalf = revertedHalf \* 10 + x % 10;**</mark>\ <mark style="color:blue;">**=>**</mark> pop off the last digit of x && add it to reverted half && original reverted half need to \* 10
 * compare的时候要涵盖偶数和奇数digit的情况，这样子的话才能针对奇数个digit有好的判断
 
 <mark style="color:green;">**Q:**</mark> 这样如何improve了efficiency? The beauty of this solution lies in the fact that it only needs to process about half of the digits in the number, which makes it more efficient than solutions that process all the digits. Plus, it **doesn't require the extra space** that would be needed for a string representation of the number.

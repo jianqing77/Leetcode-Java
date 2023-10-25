@@ -71,10 +71,11 @@ Given the `head` of a singly linked list, return _the <mark style="color:yellow;
           ↓
 1 -> 2 -> 3 -> 4 -> null
                      ↑
-                    fast
+                    fast 
 ```
 
 ```java
+// if even num: return the second one
 class Solution {
     public ListNode middleNode(ListNode head) {
         // initialize two pointers
@@ -90,6 +91,30 @@ class Solution {
     }
 }
 ```
+
+<pre class="language-java"><code class="lang-java">// if even num: return the first one
+class Solution {
+    public ListNode middleNode(ListNode head) {
+        // initialize two pointers
+        ListNode slow = head;
+        ListNode fast = head;
+        <a data-footnote-ref href="#user-content-fn-1">ListNode prev = null;</a>
+        // fast!=null => match even number of elements edge case
+        // fast.next!=null => match odd number of elements edge case
+        while (fast != null &#x26;&#x26; fast.next != null) {
+            prev = slow; 
+            slow = slow.next; // 1 step/move
+            fast = fast.next.next; // 2 steps / move
+        }
+        // when the num is even: return the first mid 
+        if (fast != null){
+            <a data-footnote-ref href="#user-content-fn-2">return prev;</a>
+        }
+        return slow;
+    }
+}
+
+</code></pre>
 
 </details>
 
@@ -164,3 +189,7 @@ Array:
 * Space Complexity: O(N), the space used by A.
 
 </details>
+
+[^1]: initiate a placeholder for the previous node
+
+[^2]: return the previous one
