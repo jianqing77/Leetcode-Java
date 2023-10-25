@@ -70,13 +70,21 @@
   * [🟠 0889 -  Construct Binary Tree from Preorder and Postorder Traversal](overview/problem-summary/889-construct-binary-tree-from-preorder-and-postorder-traversal.md)
   * [🟠 0199 -  Binary Tree Right Side View](overview/problem-summary/199-binary-tree-right-side-view.md)
   * [🟠 0314 -  Binary Tree Vertical Order Traversal](overview/problem-summary/314-binary-tree-vertical-order-traversal.md)
-  * [0064 - Minimum Path Sum](overview/problem-summary/64-minimum-path-sum.md)
   * [🟢 0013 - Roman to Integer](overview/problem-summary/0013-roman-to-integer.md)
+  * [0012 - Integer to Roman](overview/problem-summary/0012-integer-to-roman.md)
   * [0009 - Palindrome Number](overview/problem-summary/0009-palindrome-number.md)
-  * [4](overview/problem-summary/4.md)
+  * [2396 - Strictly Palindromic Number](overview/problem-summary/2396-strictly-palindromic-number.md)
+  * [0234 - Palindrome Linked List](overview/problem-summary/0234-palindrome-linked-list.md)
+  * [0528 - Random Pick with Weight](overview/problem-summary/0528-random-pick-with-weight.md)
+  * [0050 -  Pow(x, n)](overview/problem-summary/0050-pow-x-n.md)
+  * [0064 - Minimum Path Sum](overview/problem-summary/64-minimum-path-sum.md)
+  * [1](<overview/problem-summary/1 (1).md>)
+  * [2](overview/problem-summary/2.md)
+  * [3](overview/problem-summary/3.md)
 
 ## 🔻 Types
 
+* [▫ Palindrome类](types/palindrome-lei.md)
 * [▫ Reverse类](types/reverse-lei.md)
 * [▫ Two Pointers](types/two-pointers-shuang-zhi-zhen-lei/README.md)
   * [1. >< 相向双指针](types/two-pointers-shuang-zhi-zhen-lei/1.-xiang-xiang-shuang-zhi-zhen/README.md)

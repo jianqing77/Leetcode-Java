@@ -23,3 +23,5 @@ Sliding Window: Efficient technique for finding a subarray or substring with spe
 Greedy Algorithms: Making locally optimal choices to achieve a global optimum. Often used in optimization problems where there's a clear "best" choice at each step.
 
 Dynamic Programming: Solving problems by breaking them down into smaller subproblems and storing their solutions. Techniques include memoization (top-down) and tabulation (bottom-up).
+
+[resources](https://mnunknown.gitbook.io/algorithm-notes/binary\_tree/530\_tree):

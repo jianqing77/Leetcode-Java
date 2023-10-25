@@ -109,7 +109,7 @@ class Solution {
 
     private Map<Character, Integer> map = new HashMap<>();
     
-    // IV
+    // LVIII = 50 - 5 + 1 + 1 +1
     public int romanToInt(String s) {
 
         populateMap(); // call helper method

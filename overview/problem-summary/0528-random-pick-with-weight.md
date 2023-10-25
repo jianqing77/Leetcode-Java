@@ -1,4 +1,8 @@
-# 4
+---
+description: '@Math'
+---
+
+# 0528 - Random Pick with Weight
 
 <details>
 
