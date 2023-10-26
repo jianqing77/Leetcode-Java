@@ -76,7 +76,7 @@
   * [🟠 0234 - Palindrome Linked List](overview/problem-summary/0234-palindrome-linked-list.md)
   * [🟠 143 - Reorder List](overview/problem-summary/143-reorder-list.md)
   * [2396 - Strictly Palindromic Number](overview/problem-summary/2396-strictly-palindromic-number.md)
-  * [0528 - Random Pick with Weight](overview/problem-summary/0528-random-pick-with-weight.md)
+  * [🟠 ❌0528 - Random Pick with Weight](overview/problem-summary/0528-random-pick-with-weight.md)
   * [0050 -  Pow(x, n)](overview/problem-summary/0050-pow-x-n.md)
   * [0064 - Minimum Path Sum](overview/problem-summary/64-minimum-path-sum.md)
   * [2](overview/problem-summary/2.md)
