@@ -47,14 +47,6 @@ Given an integer `x`, return `true` _if_ `x` _is a  **palindrome**, and_ `false`
 
 <details>
 
-<summary>Algorithm </summary>
-
-
-
-</details>
-
-<details>
-
 <summary>✅ Code : <mark style="color:yellow;">convert to String</mark>  O(n) &#x26; O(n) 很容易写对但是runtime高</summary>
 
 卡：integer to string method => **String s **<mark style="color:yellow;">**= Integer.toString(x)**</mark>
