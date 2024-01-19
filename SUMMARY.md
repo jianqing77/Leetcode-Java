@@ -1,8 +1,24 @@
 # Table of contents
 
+* [🍍 Algo](README.md)
+  * [M0 - Growth of Functions with Sorting](algo/m0-growth-of-functions-with-sorting/README.md)
+    * [🔵 Bubble Sort](algo/m0-growth-of-functions-with-sorting/bubble-sort.md)
+    * [🔵 Selection Sort](algo/m0-growth-of-functions-with-sorting/selection-sort.md)
+    * [🔵 Insertion Sort](algo/m0-growth-of-functions-with-sorting/insertion-sort.md)
+    * [Merge Sort](algo/m0-growth-of-functions-with-sorting/merge-sort.md)
+    * [Quick Sort](algo/m0-growth-of-functions-with-sorting/quick-sort.md)
+  * [M1 - Asymptotic Notation](algo/m1-asymptotic-notation.md)
+  * [M2 - Complexity (Computability & Cryptography)](algo/m2-complexity-computability-and-cryptography.md)
+  * [M3&4 - Divide-and-Conquer](algo/m3-and-4-divide-and-conquer.md)
+  * [M5 - Data Structures & Graphs](algo/m5-data-structures-and-graphs.md)
+  * [M6&7 - Greedy Algorithms](algo/m6-and-7-greedy-algorithms.md)
+  * [M8&9 - Dynamic Programming](algo/m8-and-9-dynamic-programming.md)
+  * [M10&11 - Network Flows](algo/m10-and-11-network-flows.md)
+  * [M12 - NP-Completeness](algo/m12-np-completeness.md)
+
 ## 🔻 Overview
 
-* [Data Structure](README.md)
+* [Data Structure](<README (1).md>)
   * [Hint](overview/data-structure/hint.md)
   * [◽ Array 数组](overview/data-structure/array-shu-zu.md)
   * [▫ String 字符串](overview/data-structure/string-zi-fu-chuan/README.md)
@@ -81,12 +97,16 @@
   * [0064 - Minimum Path Sum](overview/problem-summary/64-minimum-path-sum.md)
   * [0050 -  Pow(x, n)](overview/problem-summary/0050-pow-x-n.md)
   * [2396 - Strictly Palindromic Number](overview/problem-summary/2396-strictly-palindromic-number.md)
-  * [1](<overview/problem-summary/1 (1).md>)
-  * [2](overview/problem-summary/2.md)
+  * [🟠 0075 - Sort Colors](overview/problem-summary/0075-sort-colors.md)
+  * [🟢 1051 - Height Checker](overview/problem-summary/1051-height-checker.md)
   * [3](overview/problem-summary/3.md)
+  * [Copy of 3](overview/problem-summary/copy-of-3.md)
+  * [Copy of Copy of 3](overview/problem-summary/copy-of-copy-of-3.md)
 
 ## 🔻 Types
 
+* [◽ Sort类](types/sort-lei/README.md)
+  * [Untitled](types/sort-lei/untitled.md)
 * [▫ Palindrome类](types/palindrome-lei.md)
 * [▫ Reverse类](types/reverse-lei.md)
 * [▫ Two Pointers](types/two-pointers-shuang-zhi-zhen-lei/README.md)
