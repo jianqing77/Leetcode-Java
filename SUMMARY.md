@@ -99,7 +99,7 @@
   * [2396 - Strictly Palindromic Number](overview/problem-summary/2396-strictly-palindromic-number.md)
   * [🟠 0075 - Sort Colors](overview/problem-summary/0075-sort-colors.md)
   * [🟢 1051 - Height Checker](overview/problem-summary/1051-height-checker.md)
-  * [3](overview/problem-summary/3.md)
+  * [152. Maximum Product Subarray](overview/problem-summary/152.-maximum-product-subarray.md)
   * [Copy of 3](overview/problem-summary/copy-of-3.md)
   * [Copy of Copy of 3](overview/problem-summary/copy-of-copy-of-3.md)
 
