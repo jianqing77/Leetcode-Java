@@ -142,7 +142,7 @@
 * [▫ Search & BackTracking](types/search-backtracking-sou-suo-yu-hui-su-lei.md)
 * [▫ Dynamic Programming](types/dynamic-programming/README.md)
   * [🟢 70. Climb Chairs](types/dynamic-programming/70.-climb-chairs.md)
-  * [198. House Robber](types/dynamic-programming/198.-house-robber.md)
+  * [🟠 198. House Robber](types/dynamic-programming/198.-house-robber.md)
   * [746. Min Cost Climbing Stairs](types/dynamic-programming/746.-min-cost-climbing-stairs.md)
   * [1137. N-th Tribonacci Number](types/dynamic-programming/1137.-n-th-tribonacci-number.md)
   * [Copy of Copy of 1](types/dynamic-programming/copy-of-copy-of-1.md)

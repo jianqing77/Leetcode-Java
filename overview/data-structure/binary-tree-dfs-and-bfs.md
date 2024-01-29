@@ -19,7 +19,6 @@
 > 1. singly layer logic：考虑本node
 > 2. recursion的实现：考虑left and right subtree
 > 3. termination condition
-> 4.
 
 ## Concepts
 
