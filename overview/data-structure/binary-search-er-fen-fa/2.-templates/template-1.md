@@ -1,4 +1,4 @@
-# Template 1
+# 🔸 Template 1
 
 <pre class="language-java"><code class="lang-java"><strong>class Solution {
 </strong>    public int search(int[] nums, int target) {

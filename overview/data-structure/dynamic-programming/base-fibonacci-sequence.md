@@ -1,4 +1,4 @@
-# ▫ DP 动态规划
+# 🔹 Base: Fibonacci Sequence
 
 ### <mark style="color:yellow;">Fibonacci Sequence</mark>
 
@@ -193,24 +193,26 @@ This Java program demonstrates the bottom-up approach for calculating the Fibona
 * When the same computation is needed again, the algorithm will <mark style="color:green;">**first check the table to see if the result is already present**</mark> to avoid redundant calculations.
 
 ```java
-// USING HASHMAP
-public static int dp(int i) {
+class Solution {
+
     // intitiate a memo as a HashMap
     private HashMap<Integer, Integer> memo = new HashMap<>();
-    
-    if (i <= 2) return i;
-    
-    // Check if the result is already in the memo to avoid re-computation
-    if (!memo.containsKey(i)) {
-        memo.put(i, dp(i-1) + dp(i-2); // recursion -- If not, compute it by breaking it into subproblems
+
+    private int dp(int i) {
+        if (i <= 1) return i;
+        
+        // Check if the result is already in the memo to avoid re-computation
+        if (!memo.containsKey(i)) {
+            memo.put(i, dp(i-1) + dp(i-2)); // recursion -- If not, compute it by breaking it into subproblems
+        }
+        return memo.get(i);
+    } 
+
+
+    public int fibonacci(int n) {
+        return dp(n);
     }
-    return memo.get(i);
-} 
-
-public int fibonacci(int n) {
-    return dp(n)
 }
-
 ```
 
 ```java

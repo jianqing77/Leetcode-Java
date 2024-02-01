@@ -1,4 +1,4 @@
-# \[left, right]
+# 🔸 \[left, right]
 
 <mark style="color:purple;">定义 search space 很重要 => 决定了如何写code</mark>
 

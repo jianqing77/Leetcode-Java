@@ -2,7 +2,7 @@
 description: '@ Dynamic Programming'
 ---
 
-# 🟢 70. Climb Chairs - # of ways
+# 🟢 0070 - Climb Chairs - # of ways
 
 <details>
 

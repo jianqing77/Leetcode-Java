@@ -1,4 +1,4 @@
-# Recursion
+# 🔸 Recursion
 
 In this code, we have a public function `binarySearch(int[] nums, int target)` that calls a private helper function `binarySearch(int[] nums, int target, int left, int right)`. The helper function is recursive and does the actual binary search.
 

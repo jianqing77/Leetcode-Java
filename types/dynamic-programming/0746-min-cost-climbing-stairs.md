@@ -2,7 +2,7 @@
 description: '@Dynamic Programming @Array'
 ---
 
-# 🟢 746. Min Cost Climbing Stairs
+# 🟢 0746 - Min Cost Climbing Stairs
 
 <details>
 
@@ -58,7 +58,7 @@ The total cost is 6.
 
 <details>
 
-<summary>✅Algorithm: Top Down - Memoization</summary>
+<summary>✅ Algorithm: Top Down - Memoization</summary>
 
 1. Define a hash map `memo`, where `memo[i]` represents the minimum cost of reaching the $$i^{th}$$ step.
 2. Define a function `dp`, where `dp(i)` will determine the minimum cost to reach the $$ithi^{th}ith$$ step.
@@ -68,8 +68,6 @@ The total cost is 6.
       1. &#x20;If so, `return memo[i]`.&#x20;
       2. Otherwise, use the recurrence relation to calculate `memo[i]`, and then return `memo[i]`.
 4. Simply call and return `dp(cost.length)`. Once again, we can make use of the trick from approach 1 where we treat the top floor as an extra "step". Since `cost` is 0-indexed, `cost.length` will be an index 1 step above the last element of `cost`.
-
-
 
 </details>
 
@@ -120,7 +118,7 @@ Space Complexity: O(n)
 
 <details>
 
-<summary>心得 Key Points</summary>
+<summary>✅ 心得 Key Points</summary>
 
 1. 这道题把cost作为一个params 所以就不需要define class-level cost
 2. 心机的点在于dp(i)是cost before getting to the current stair

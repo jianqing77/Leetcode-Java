@@ -1,4 +1,4 @@
-# Template 2
+# 🔸 Template 2
 
 <pre class="language-java"><code class="lang-java">// binary search: find exact the same number
 class Solution {

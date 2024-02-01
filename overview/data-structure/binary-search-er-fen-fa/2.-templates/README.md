@@ -1,2 +1,2 @@
-# 2. Templates
+# 🔹 2. Templates
 

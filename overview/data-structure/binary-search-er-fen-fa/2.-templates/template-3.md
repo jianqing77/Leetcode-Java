@@ -1,4 +1,4 @@
-# Template 3
+# 🔸 Template 3
 
 <pre class="language-java"><code class="lang-java"><strong>int binarySearch(int[] nums, int target){
 </strong>  if(nums == null || nums.length == 0)
