@@ -10,14 +10,14 @@ description: Depth-First Search  Binary Tree
 
 Given a binary tree, <mark style="color:yellow;">**find the lowest common ancestor**</mark> (LCA) of two given nodes in the tree. According to the [definition of LCA on Wikipedia](https://en.wikipedia.org/wiki/Lowest\_common\_ancestor): “The lowest common ancestor is defined between two nodes `p` and `q` as the lowest node in `T` that has both `p` and `q` as descendants (where we <mark style="color:yellow;">**allow a node to be a descendant of itself**</mark>).”
 
-![](<../../.gitbook/assets/image (1) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png>)
 
 <pre class="language-java"><code class="lang-java"><strong>Input: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1
 </strong><strong>Output: 3
 </strong><strong>LCA of nodes 5 and 1 is 3.
 </strong></code></pre>
 
-![](<../../.gitbook/assets/image (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (1) (1) (1) (1) (1).png>)
 
 <pre class="language-java"><code class="lang-java"><strong>Input: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 4
 </strong><strong>Output: 5
@@ -75,7 +75,7 @@ Given a binary tree, <mark style="color:yellow;">**find the lowest common ancest
 
 <summary>✅ Code Demo </summary>
 
-![](<../../.gitbook/assets/image (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (1) (1) (1) (1) (1).png>)
 
 {% code lineNumbers="true" %}
 ```java
